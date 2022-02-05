@@ -16,10 +16,10 @@ const createRow = (width) => {
   return row;
 }
 
-const createBoard = (boardContainer, width, height) => {
+const displayBoard = (boardContainer, width, height) => {
   for (let i = 0; i < height; i += 1) {
     boardContainer.appendChild(createRow(width));
   }
 };
 
-export default createBoard;
+export default displayBoard;
