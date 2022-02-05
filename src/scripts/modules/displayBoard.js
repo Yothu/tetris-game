@@ -1,7 +1,7 @@
 const createColumn = () => {
   const column = document.createElement('div');
   column.classList.add('boardColumn', 'p-0');
-  column.innerText = 'a';
+  column.innerText = '.';
   return column;
 };
 

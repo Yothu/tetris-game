@@ -25,20 +25,27 @@ const checkPositionOf1 = () => {
   return false;
 }
 
-const displayMov = (pos) => {
+const displayMov = (matrix) => {
   const table = tetrisTable.children;
-  console.log('pos[0]:', pos[1]);
-  table[pos[1]].children[pos[0]].innerHTML = '0';
+  for (let i = 0; i < BOARD_WIDTH; i += 1) {
+    for (let j = 0; j < BOARD_HEIGHT; j += 1) {
+      if (matrix[i][j] === 1 ) {
+        table[j].children[i].innerHTML = '0';
+      } else {
+        table[j].children[i].innerHTML = '.';
+      }
+    }    
+  }
 }
 
 const down = () => {
   console.log('down');
   const pos = checkPositionOf1(matrix);
   matrix[pos[0]][pos[1]] = 1;
-  displayMov(pos);
+  displayMov(matrix);
 }
 
-// setInterval(down, 1000);
+// setInterval(down, 100);
 // down(matrix);
 // setTimeout(down(matrix), 1000);
 
