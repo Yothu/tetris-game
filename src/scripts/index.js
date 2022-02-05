@@ -1,4 +1,9 @@
 import '../components/style.css';
-// import asd from './modules/asd.js';
+import createBoard from './modules/createBoard.js';
 
-// asd();
+const BOARD_WIDTH = 10;
+const BOARD_HEIGHT = 24;
+
+const container = document.querySelector('.tetris-table');
+
+createBoard(container, BOARD_WIDTH, BOARD_HEIGHT);
